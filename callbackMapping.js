@@ -1,6 +1,6 @@
 var words = ["ground", "control", "to", "major", "tom"];
 
-function myMap(list, cb) {
+function map(list, cb) {
   var output = [];
   for (var i = 0; i < list.length; i++) {
     var result = cb(list[i], i, list);
@@ -9,14 +9,14 @@ function myMap(list, cb) {
   console.log(output);
 }
 
-myMap(words, function(word) {
+map(words, function(word) {
   return word.length;
 });
 
-myMap(words, function(word) {
+map(words, function(word) {
   return word.toUpperCase();
 });
 
-myMap(words, function(word) {
+map(words, function(word) {
   return word.split('').reverse().join('');
 });
